@@ -483,6 +483,7 @@ class ViewController: NSViewController {
 
         
    print(command)
+        
         var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let documentsDir = paths[0]
         
@@ -493,8 +494,8 @@ class ViewController: NSViewController {
         printf "******************************"
         printf "\n"
         printf "\n"
-        printf "iRestore has generated the command:"
-        printf "\n \(command)"
+        printf "iRestore has generated the command: \n"
+        echo "\(command)"
         printf "\n"
         printf "\n"
         printf "I will now run this command which will initiate FutureRestore. Good Luck!"
@@ -517,7 +518,6 @@ class ViewController: NSViewController {
         
         \(command)
         """
-        
         if let dir : NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as! NSString {
             
             do {
