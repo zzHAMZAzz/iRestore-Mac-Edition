@@ -492,7 +492,7 @@ class ViewController: NSViewController {
         
         let commando = """
         #! /bin/bash
-        cd ~/Documents/futurerestore-latest/
+        cd ~/Documents/futurerestore_macOS_v224/
         printf "******************************"
         printf "\n"
         printf "\n"
@@ -517,7 +517,6 @@ class ViewController: NSViewController {
         sleep 1
         printf "\n 1 \n"
         printf "****************************** \n"
-        cd ~/Documents/futurerestore_macOS_v224/
         \(command)
         """
         if let dir : NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as! NSString {
