@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.8.1)
+  - SSZipArchive (2.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.1)
+  - SSZipArchive
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - SSZipArchive
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
+
+PODFILE CHECKSUM: b7c754fb5a103be685ad6a247ae6f8e0a5a99a40
+
+COCOAPODS: 1.6.0

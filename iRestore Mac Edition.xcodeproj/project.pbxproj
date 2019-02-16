@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBF8F7152212101900E083BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F7142212101900E083BD /* AppDelegate.swift */; };
+		BBF8F7172212101900E083BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F7162212101900E083BD /* ViewController.swift */; };
+		BBF8F7192212101B00E083BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF8F7182212101B00E083BD /* Assets.xcassets */; };
+		BBF8F71C2212101B00E083BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF8F71A2212101B00E083BD /* Main.storyboard */; };
+		BBF8F7282212101B00E083BD /* iRestore_Mac_EditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F7272212101B00E083BD /* iRestore_Mac_EditionTests.swift */; };
+		BBF8F7332212101B00E083BD /* iRestore_Mac_EditionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F7322212101B00E083BD /* iRestore_Mac_EditionUITests.swift */; };
+		D9E051C9C831C12931EE65AE /* Pods_iRestore_Mac_Edition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1BCCA946A638D22A120D8D /* Pods_iRestore_Mac_Edition.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBF8F7242212101B00E083BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBF8F7092212101800E083BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBF8F7102212101800E083BD;
+			remoteInfo = "iRestore Mac Edition";
+		};
+		BBF8F72F2212101B00E083BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBF8F7092212101800E083BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBF8F7102212101800E083BD;
+			remoteInfo = "iRestore Mac Edition";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A1BCCA946A638D22A120D8D /* Pods_iRestore_Mac_Edition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iRestore_Mac_Edition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B14D2DF453B8E2703F9CD2 /* Pods-iRestore Mac Edition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRestore Mac Edition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iRestore Mac Edition/Pods-iRestore Mac Edition.debug.xcconfig"; sourceTree = "<group>"; };
+		BBD1175E2214C9CE00A616DF /* iRestore Mac Edition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iRestore Mac Edition.entitlements"; sourceTree = "<group>"; };
+		BBF8F7112212101800E083BD /* iRestore Mac Edition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iRestore Mac Edition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF8F7142212101900E083BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBF8F7162212101900E083BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBF8F7182212101B00E083BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBF8F71B2212101B00E083BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBF8F71D2212101B00E083BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBF8F71E2212101B00E083BD /* iRestore_Mac_Edition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRestore_Mac_Edition.entitlements; sourceTree = "<group>"; };
+		BBF8F7232212101B00E083BD /* iRestore Mac EditionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iRestore Mac EditionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF8F7272212101B00E083BD /* iRestore_Mac_EditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRestore_Mac_EditionTests.swift; sourceTree = "<group>"; };
+		BBF8F7292212101B00E083BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBF8F72E2212101B00E083BD /* iRestore Mac EditionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iRestore Mac EditionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF8F7322212101B00E083BD /* iRestore_Mac_EditionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRestore_Mac_EditionUITests.swift; sourceTree = "<group>"; };
+		BBF8F7342212101B00E083BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C276C7623823C38DD45CEE1C /* Pods-iRestore Mac Edition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRestore Mac Edition.release.xcconfig"; path = "Pods/Target Support Files/Pods-iRestore Mac Edition/Pods-iRestore Mac Edition.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBF8F70E2212101800E083BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E051C9C831C12931EE65AE /* Pods_iRestore_Mac_Edition.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8F7202212101B00E083BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8F72B2212101B00E083BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		338E8129686C13045CAE5AAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A1BCCA946A638D22A120D8D /* Pods_iRestore_Mac_Edition.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBF8F7082212101800E083BD = {
+			isa = PBXGroup;
+			children = (
+				BBF8F7132212101800E083BD /* iRestore Mac Edition */,
+				BBF8F7262212101B00E083BD /* iRestore Mac EditionTests */,
+				BBF8F7312212101B00E083BD /* iRestore Mac EditionUITests */,
+				BBF8F7122212101800E083BD /* Products */,
+				D25881114632B709363F583E /* Pods */,
+				338E8129686C13045CAE5AAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BBF8F7122212101800E083BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBF8F7112212101800E083BD /* iRestore Mac Edition.app */,
+				BBF8F7232212101B00E083BD /* iRestore Mac EditionTests.xctest */,
+				BBF8F72E2212101B00E083BD /* iRestore Mac EditionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBF8F7132212101800E083BD /* iRestore Mac Edition */ = {
+			isa = PBXGroup;
+			children = (
+				BBD1175E2214C9CE00A616DF /* iRestore Mac Edition.entitlements */,
+				BBF8F7142212101900E083BD /* AppDelegate.swift */,
+				BBF8F7162212101900E083BD /* ViewController.swift */,
+				BBF8F7182212101B00E083BD /* Assets.xcassets */,
+				BBF8F71A2212101B00E083BD /* Main.storyboard */,
+				BBF8F71D2212101B00E083BD /* Info.plist */,
+				BBF8F71E2212101B00E083BD /* iRestore_Mac_Edition.entitlements */,
+			);
+			path = "iRestore Mac Edition";
+			sourceTree = "<group>";
+		};
+		BBF8F7262212101B00E083BD /* iRestore Mac EditionTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBF8F7272212101B00E083BD /* iRestore_Mac_EditionTests.swift */,
+				BBF8F7292212101B00E083BD /* Info.plist */,
+			);
+			path = "iRestore Mac EditionTests";
+			sourceTree = "<group>";
+		};
+		BBF8F7312212101B00E083BD /* iRestore Mac EditionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BBF8F7322212101B00E083BD /* iRestore_Mac_EditionUITests.swift */,
+				BBF8F7342212101B00E083BD /* Info.plist */,
+			);
+			path = "iRestore Mac EditionUITests";
+			sourceTree = "<group>";
+		};
+		D25881114632B709363F583E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15B14D2DF453B8E2703F9CD2 /* Pods-iRestore Mac Edition.debug.xcconfig */,
+				C276C7623823C38DD45CEE1C /* Pods-iRestore Mac Edition.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBF8F7102212101800E083BD /* iRestore Mac Edition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBF8F7372212101B00E083BD /* Build configuration list for PBXNativeTarget "iRestore Mac Edition" */;
+			buildPhases = (
+				51E5F871C6E473B41A62B944 /* [CP] Check Pods Manifest.lock */,
+				BBF8F70D2212101800E083BD /* Sources */,
+				BBF8F70E2212101800E083BD /* Frameworks */,
+				BBF8F70F2212101800E083BD /* Resources */,
+				A9F58C0161925FE6EFB46183 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iRestore Mac Edition";
+			productName = "iRestore Mac Edition";
+			productReference = BBF8F7112212101800E083BD /* iRestore Mac Edition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBF8F7222212101B00E083BD /* iRestore Mac EditionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBF8F73A2212101B00E083BD /* Build configuration list for PBXNativeTarget "iRestore Mac EditionTests" */;
+			buildPhases = (
+				BBF8F71F2212101B00E083BD /* Sources */,
+				BBF8F7202212101B00E083BD /* Frameworks */,
+				BBF8F7212212101B00E083BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBF8F7252212101B00E083BD /* PBXTargetDependency */,
+			);
+			name = "iRestore Mac EditionTests";
+			productName = "iRestore Mac EditionTests";
+			productReference = BBF8F7232212101B00E083BD /* iRestore Mac EditionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBF8F72D2212101B00E083BD /* iRestore Mac EditionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBF8F73D2212101B00E083BD /* Build configuration list for PBXNativeTarget "iRestore Mac EditionUITests" */;
+			buildPhases = (
+				BBF8F72A2212101B00E083BD /* Sources */,
+				BBF8F72B2212101B00E083BD /* Frameworks */,
+				BBF8F72C2212101B00E083BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBF8F7302212101B00E083BD /* PBXTargetDependency */,
+			);
+			name = "iRestore Mac EditionUITests";
+			productName = "iRestore Mac EditionUITests";
+			productReference = BBF8F72E2212101B00E083BD /* iRestore Mac EditionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBF8F7092212101800E083BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Hamza;
+				TargetAttributes = {
+					BBF8F7102212101800E083BD = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					BBF8F7222212101B00E083BD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BBF8F7102212101800E083BD;
+					};
+					BBF8F72D2212101B00E083BD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BBF8F7102212101800E083BD;
+					};
+				};
+			};
+			buildConfigurationList = BBF8F70C2212101800E083BD /* Build configuration list for PBXProject "iRestore Mac Edition" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBF8F7082212101800E083BD;
+			productRefGroup = BBF8F7122212101800E083BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBF8F7102212101800E083BD /* iRestore Mac Edition */,
+				BBF8F7222212101B00E083BD /* iRestore Mac EditionTests */,
+				BBF8F72D2212101B00E083BD /* iRestore Mac EditionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBF8F70F2212101800E083BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF8F7192212101B00E083BD /* Assets.xcassets in Resources */,
+				BBF8F71C2212101B00E083BD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8F7212212101B00E083BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8F72C2212101B00E083BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51E5F871C6E473B41A62B944 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iRestore Mac Edition-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9F58C0161925FE6EFB46183 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iRestore Mac Edition/Pods-iRestore Mac Edition-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iRestore Mac Edition/Pods-iRestore Mac Edition-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBF8F70D2212101800E083BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF8F7172212101900E083BD /* ViewController.swift in Sources */,
+				BBF8F7152212101900E083BD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8F71F2212101B00E083BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF8F7282212101B00E083BD /* iRestore_Mac_EditionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8F72A2212101B00E083BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF8F7332212101B00E083BD /* iRestore_Mac_EditionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBF8F7252212101B00E083BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBF8F7102212101800E083BD /* iRestore Mac Edition */;
+			targetProxy = BBF8F7242212101B00E083BD /* PBXContainerItemProxy */;
+		};
+		BBF8F7302212101B00E083BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBF8F7102212101800E083BD /* iRestore Mac Edition */;
+			targetProxy = BBF8F72F2212101B00E083BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBF8F71A2212101B00E083BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBF8F71B2212101B00E083BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBF8F7352212101B00E083BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBF8F7362212101B00E083BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		BBF8F7382212101B00E083BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15B14D2DF453B8E2703F9CD2 /* Pods-iRestore Mac Edition.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KSX5V922WA;
+				INFOPLIST_FILE = "iRestore Mac Edition/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.iRestore-Mac-Edition";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		BBF8F7392212101B00E083BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C276C7623823C38DD45CEE1C /* Pods-iRestore Mac Edition.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KSX5V922WA;
+				INFOPLIST_FILE = "iRestore Mac Edition/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.iRestore-Mac-Edition";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		BBF8F73B2212101B00E083BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KSX5V922WA;
+				INFOPLIST_FILE = "iRestore Mac EditionTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.iRestore-Mac-EditionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRestore Mac Edition.app/Contents/MacOS/iRestore Mac Edition";
+			};
+			name = Debug;
+		};
+		BBF8F73C2212101B00E083BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KSX5V922WA;
+				INFOPLIST_FILE = "iRestore Mac EditionTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.iRestore-Mac-EditionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRestore Mac Edition.app/Contents/MacOS/iRestore Mac Edition";
+			};
+			name = Release;
+		};
+		BBF8F73E2212101B00E083BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KSX5V922WA;
+				INFOPLIST_FILE = "iRestore Mac EditionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.iRestore-Mac-EditionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = "iRestore Mac Edition";
+			};
+			name = Debug;
+		};
+		BBF8F73F2212101B00E083BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KSX5V922WA;
+				INFOPLIST_FILE = "iRestore Mac EditionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.iRestore-Mac-EditionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = "iRestore Mac Edition";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBF8F70C2212101800E083BD /* Build configuration list for PBXProject "iRestore Mac Edition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF8F7352212101B00E083BD /* Debug */,
+				BBF8F7362212101B00E083BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBF8F7372212101B00E083BD /* Build configuration list for PBXNativeTarget "iRestore Mac Edition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF8F7382212101B00E083BD /* Debug */,
+				BBF8F7392212101B00E083BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBF8F73A2212101B00E083BD /* Build configuration list for PBXNativeTarget "iRestore Mac EditionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF8F73B2212101B00E083BD /* Debug */,
+				BBF8F73C2212101B00E083BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBF8F73D2212101B00E083BD /* Build configuration list for PBXNativeTarget "iRestore Mac EditionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF8F73E2212101B00E083BD /* Debug */,
+				BBF8F73F2212101B00E083BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBF8F7092212101800E083BD /* Project object */;
+}
