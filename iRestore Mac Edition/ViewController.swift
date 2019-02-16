@@ -9,12 +9,14 @@
 import Cocoa
 import SSZipArchive
 import Alamofire
-// http://api.tihmstar.net/builds/futurerestore/futurerestore-latest.zip
-class ViewController: NSViewController {
 
+
+// https://github.com/s0uthwest/futurerestore/releases/download/224/futurerestore_macOS_v224.zip
+class ViewController: NSViewController {
     
     
-   func futurerestoredl()
+    
+    func futurerestoredl()
     {
         
         // Delete any existing files to avoid overwritting issues
@@ -23,20 +25,20 @@ class ViewController: NSViewController {
         let documentsDir = paths[0]
         
         do {
-        try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore-latest.zip"))
-        try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore-latest/"))
+            try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore-latest.zip"))
+            try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore-latest/"))
         }
         catch let error as NSError {
             print("Error deleting files: \(error)")
         }
         // ---------------------------
-    
+        
         
         
         
         
         let destination = DownloadRequest.suggestedDownloadDestination()
-        let urlString = "http://api.tihmstar.net/builds/futurerestore/futurerestore-latest.zip"
+        let urlString = "https://github.com/s0uthwest/futurerestore/releases/download/224/futurerestore_macOS_v224.zip"
         print("--- Starting Download of futurerestore() ---")
         Alamofire.download(urlString, to: destination).response { response in // method defaults to `.get`
             if (response.error != nil)
@@ -60,7 +62,7 @@ class ViewController: NSViewController {
                 print("DEBUG: Downloaded to: " + destinationstring!)
                 
                 self.unzipFutureRestore()
-
+                
             }
         }
         
@@ -68,7 +70,7 @@ class ViewController: NSViewController {
     
     func assetdl()
     {
-
+        
         let destination = DownloadRequest.suggestedDownloadDestination()
         let urlString = "https://arxius.io/api/download/file?id=24061d3e"
         print("--- Starting Download of assetdl() ---")
@@ -109,8 +111,8 @@ class ViewController: NSViewController {
     {
         var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let documentsDir = paths[0]
-        let zipPath = documentsDir.appendingFormat("/futurerestore-latest.zip")
-        let unzipPath = documentsDir.appendingFormat("/futurerestore-latest/")
+        let zipPath = documentsDir.appendingFormat("/futurerestore_macOS_v224.zip")
+        let unzipPath = documentsDir.appendingFormat("/futurerestore_macOS_v224/")
         SSZipArchive.unzipFile(atPath: zipPath, toDestination: unzipPath)
         print ("DEBUG: zipPath = " + zipPath)
         print ("DEBUG: unzipPath = " + unzipPath)
@@ -134,7 +136,7 @@ class ViewController: NSViewController {
                 alert.runModal()
                 
             }
-            }
+        }
         if success == true {
             let alert = NSAlert.init()
             alert.messageText = "Done!"
@@ -146,12 +148,12 @@ class ViewController: NSViewController {
             // make executable
             var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
             let documentsDir = paths[0]
-            let FRpath = documentsDir.appendingFormat("/futurerestore-latest")
-            shell("cd " + FRpath + "; chmod +x futurerestore_macos")
+            let FRpath = documentsDir.appendingFormat("/futurerestore_macOS_v224")
+            shell("cd " + FRpath + "; chmod +x futurerestore")
         }
         
-
-
+        
+        
     }
     // Shell is used for chmod!
     func shell(_ command: String) -> String {
@@ -168,7 +170,7 @@ class ViewController: NSViewController {
         
         return output
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -180,7 +182,7 @@ class ViewController: NSViewController {
         
         var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let documentsDir = paths[0]
-        let FRpath = documentsDir.appendingFormat("/futurerestore-latest/futurerestore_macos")
+        let FRpath = documentsDir.appendingFormat("/futurerestore_macOS_v224/futurerestore")
         
         if fileManager.fileExists(atPath: FRpath) {
             print("File exists")
@@ -194,7 +196,7 @@ class ViewController: NSViewController {
             alert.alertStyle = .informational
             alert.addButton(withTitle: "OK")
             alert.runModal()
-
+            
             futurerestoredl()
         }
         
@@ -203,16 +205,16 @@ class ViewController: NSViewController {
             print("Script Asset File exists")
         }
         else {
-        
             
-        assetdl()
+            
+            assetdl()
         }
         // Do any additional setup after loading the view.
     }
-
+    
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
     
@@ -280,7 +282,7 @@ class ViewController: NSViewController {
     //
     @IBOutlet weak var bmField: NSTextField!
     @IBAction func bmButton(_ sender: NSButton) {
-    
+        
         let dialog = NSOpenPanel();
         
         dialog.title                   = "Choose the BuildManifest";
@@ -367,22 +369,22 @@ class ViewController: NSViewController {
     // TOGGLES
     //
     
-
+    
     
     @IBOutlet weak var sepButton: NSButton!
     @IBOutlet weak var bbButton: NSButton!
     
     
-  
+    
     @IBAction func bbTog(_ sender: NSButton) {
-      if (bbTogOutlet.state == .on)
+        if (bbTogOutlet.state == .on)
         {
-        // if No Baseband is enabled
-        latestBBtog.isEnabled = false
-        latestBBtog.state = .off
-        bbButton.isEnabled = false
+            // if No Baseband is enabled
+            latestBBtog.isEnabled = false
+            latestBBtog.state = .off
+            bbButton.isEnabled = false
             
-        // show warning popup
+            // show warning popup
             let alert = NSAlert.init()
             alert.messageText = "Warning"
             alert.informativeText = "Only use this option if you know what you are doing. Using this on devices that require baseband will cause a non working restore."
@@ -390,43 +392,43 @@ class ViewController: NSViewController {
             alert.addButton(withTitle: "OK")
             alert.runModal()
             
-        bbField.stringValue = "None"
+            bbField.stringValue = "None"
         }
         else
         {
-        latestBBtog.isEnabled = true
-        bbButton.isEnabled = true
-        bbField.stringValue = ""
+            latestBBtog.isEnabled = true
+            bbButton.isEnabled = true
+            bbField.stringValue = ""
         }
     }
     @IBOutlet var bbTogOutlet: NSButton!
-
+    
     @IBAction func sepTog(_ sender: Any) {
-    if (sepTogOutlet.state == .on)
-    {
-    sepButton.isEnabled = false
-    sepField.stringValue = "Automatic"
-    }
-    else
-    {
-        sepButton.isEnabled = true
-        sepField.stringValue = ""
-    }
+        if (sepTogOutlet.state == .on)
+        {
+            sepButton.isEnabled = false
+            sepField.stringValue = "Automatic"
+        }
+        else
+        {
+            sepButton.isEnabled = true
+            sepField.stringValue = ""
+        }
     }
     @IBOutlet var sepTogOutlet: NSButton!
     
     
     @IBAction func latestBBTog(_ sender: Any) {
-    if (latestBBOutlet.state == .on)
-    {
-    bbButton.isEnabled = false
-    bbField.stringValue = "Automatic"
-    }
-    else
-    {
-    bbButton.isEnabled = true
-    bbField.stringValue = ""
-    }
+        if (latestBBOutlet.state == .on)
+        {
+            bbButton.isEnabled = false
+            bbField.stringValue = "Automatic"
+        }
+        else
+        {
+            bbButton.isEnabled = true
+            bbField.stringValue = ""
+        }
     }
     @IBOutlet var latestBBOutlet: NSButton!
     
@@ -451,38 +453,38 @@ class ViewController: NSViewController {
     @IBAction func goButton(_ sender: NSButton) {
         
         
-
         
         
-     if (sepField.stringValue == "Automatic")
-     { sepcommand.stringValue = "--latest-sep "
-     }
-    else
-     { sepcommand.stringValue = "-s \"" + sepField.stringValue + "\" "
-     }
-    if (bbField.stringValue == "Automatic")
-     { bbcommand.stringValue = "--latest-baseband "}
-    else if (bbField.stringValue == "None")
-     { bbcommand.stringValue = "--no-baseband "
-     }
-    else
-     { bbcommand.stringValue = "-b \"" + bbField.stringValue + "\" "
-     }
         
-    let program = "./futurerestore_macos "
+        if (sepField.stringValue == "Automatic")
+        { sepcommand.stringValue = "--latest-sep "
+        }
+        else
+        { sepcommand.stringValue = "-s \"" + sepField.stringValue + "\" "
+        }
+        if (bbField.stringValue == "Automatic")
+        { bbcommand.stringValue = "--latest-baseband "}
+        else if (bbField.stringValue == "None")
+        { bbcommand.stringValue = "--no-baseband "
+        }
+        else
+        { bbcommand.stringValue = "-b \"" + bbField.stringValue + "\" "
+        }
+        
+        let program = "./futurerestore "
         let blob = "-t \"" + shshField.stringValue + "\" "
-
+        
         let buildmanifest = "-p \"" + bmField.stringValue + "\" "
         let buildmanifest2 = "-m \"" + bmField.stringValue + "\" "
         let ipsw = "\"" + ipswField.stringValue + "\""
-
+        
         
         
         let command = program + blob + bbcommand.stringValue + buildmanifest + sepcommand.stringValue + buildmanifest2 + ipsw
         
-
         
-   print(command)
+        
+        print(command)
         
         var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let documentsDir = paths[0]
@@ -515,7 +517,7 @@ class ViewController: NSViewController {
         sleep 1
         printf "\n 1 \n"
         printf "****************************** \n"
-        
+        cd ~/Documents/futurerestore_macOS_v224/
         \(command)
         """
         if let dir : NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as! NSString {
@@ -534,7 +536,7 @@ class ViewController: NSViewController {
         
         
     }
-
+    
     @IBAction func help(_ sender: Any) {
         let alert = NSAlert.init()
         alert.messageText = "Info"
@@ -558,8 +560,20 @@ class ViewController: NSViewController {
         alert.addButton(withTitle: "OK")
         alert.runModal()
     }
-}
- 
     
-
-
+    
+    //        Alamofire.request("https://api.github.com/repos/s0uthwest/futurerestore/releases/latest").responseJSON { (responseData) -> Void in
+    //            if((responseData.result.value) != nil) {
+    //                let swiftyJsonVar = JSON(responseData.result.value!)
+    //              //  print(swiftyJsonVar)
+    //                if let test = swiftyJsonVar[0]["assets"]["browser_download_url"].string {
+    //                    print(test)
+    //            }
+    //        }
+    //
+    //        }
+    
+    
+    
+    
+}
