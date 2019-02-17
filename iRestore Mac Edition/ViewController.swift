@@ -9,9 +9,15 @@
 import Cocoa
 import SSZipArchive
 import Alamofire
+import SWXMLHash
+
+// *****************
+// vernumber.stringValue = latest version of FutureRestore
+// latestFRurl.stringValue = latest url of FutureRestore
+// downloadedversion.stringValue = current downloaded version of FutureRestore
+// *****************
 
 
-// https://github.com/s0uthwest/futurerestore/releases/download/224/futurerestore_macOS_v224.zip
 class ViewController: NSViewController {
     
     
@@ -25,8 +31,8 @@ class ViewController: NSViewController {
         let documentsDir = paths[0]
         
         do {
-            try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore-latest.zip"))
-            try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore-latest/"))
+            try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore/"))
+            try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore_macOS_v\(vernumber.stringValue).zip"))
         }
         catch let error as NSError {
             print("Error deleting files: \(error)")
@@ -38,7 +44,7 @@ class ViewController: NSViewController {
         
         
         let destination = DownloadRequest.suggestedDownloadDestination()
-        let urlString = "https://github.com/s0uthwest/futurerestore/releases/download/224/futurerestore_macOS_v224.zip"
+        let urlString = latestFRurl.stringValue
         print("--- Starting Download of futurerestore() ---")
         Alamofire.download(urlString, to: destination).response { response in // method defaults to `.get`
             if (response.error != nil)
@@ -111,8 +117,8 @@ class ViewController: NSViewController {
     {
         var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let documentsDir = paths[0]
-        let zipPath = documentsDir.appendingFormat("/futurerestore_macOS_v224.zip")
-        let unzipPath = documentsDir.appendingFormat("/futurerestore_macOS_v224/")
+        let zipPath = documentsDir.appendingFormat("/futurerestore_macOS_v\(vernumber.stringValue).zip")
+        let unzipPath = documentsDir.appendingFormat("/futurerestore/")
         SSZipArchive.unzipFile(atPath: zipPath, toDestination: unzipPath)
         print ("DEBUG: zipPath = " + zipPath)
         print ("DEBUG: unzipPath = " + unzipPath)
@@ -148,8 +154,22 @@ class ViewController: NSViewController {
             // make executable
             var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
             let documentsDir = paths[0]
-            let FRpath = documentsDir.appendingFormat("/futurerestore_macOS_v224")
+            let FRpath = documentsDir.appendingFormat("/futurerestore/")
             shell("cd " + FRpath + "; chmod +x futurerestore")
+            
+            // add version txt file
+            
+            let commando = vernumber.stringValue
+            if let dir : NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as! NSString {
+                
+                do {
+                    try commando.write(toFile: "\(dir)/futurerestore/version.txt", atomically: true, encoding: String.Encoding.utf8)
+                }
+                catch _ {
+                    
+                    print("Error creating version text file")
+                }
+            }
         }
         
         
@@ -175,6 +195,13 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    
+        frReleases()
+        getdownloadedFRversion()
+        
+        
+        
         let fileManager = FileManager.default
         
         
@@ -182,7 +209,7 @@ class ViewController: NSViewController {
         
         var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let documentsDir = paths[0]
-        let FRpath = documentsDir.appendingFormat("/futurerestore_macOS_v224/futurerestore")
+        let FRpath = documentsDir.appendingFormat("/futurerestore/futurerestore")
         
         if fileManager.fileExists(atPath: FRpath) {
             print("File exists")
@@ -492,7 +519,7 @@ class ViewController: NSViewController {
         
         let commando = """
         #! /bin/bash
-        cd ~/Documents/futurerestore_macOS_v224/
+        cd ~/Documents/futurerestore/
         printf "******************************"
         printf "\n"
         printf "\n"
@@ -554,23 +581,86 @@ class ViewController: NSViewController {
         Baseband Manifest: Required if you are using a custom baseband.
         
         
+        --------
+        
+        Newest FutureRestore Version: v\(vernumber.stringValue)
+        Your Downloaded FutureRestore Version: v\(downloadedversion.stringValue)
+        
         """
         alert.alertStyle = .warning
         alert.addButton(withTitle: "OK")
         alert.runModal()
+        
     }
     
+    func frReleases()
+    {
+        let baseUrl = "https://zapier.com/engine/rss/4285659/s0uthwestFRreleases/"
+        let request = NSMutableURLRequest(url: NSURL(string: baseUrl)! as URL)
+        let session = URLSession.shared
+        request.httpMethod = "GET"
+        
+        var err: NSError?
+        
+        let task = session.dataTask(with: request as URLRequest) {
+            (data, response, error) in
+            
+            if data == nil {
+                print("dataTaskWithRequest error: \(error)")
+                return
+            }
+            
+            let xml = SWXMLHash.parse(data!)
+            
+            if let definition = xml["rss"]["channel"]["item"]["description"].element?.text {
+
+                let smth = definition
+                
+
+                
+                if let index = (smth.range(of: ",")?.lowerBound)
+                {
+                    let macOSlink = String(smth.prefix(upTo: index))
+                    print(macOSlink)
+                    DispatchQueue.main.async { // Correct
+                    self.latestFRurl.stringValue = macOSlink
+                    let ver = String(smth.suffix(3))
+                    self.vernumber.stringValue = ver
+                        print(ver)
+                    }
+                }
+
+            }
+            
+            
+            
+
+            
+        }
+        task.resume()
+        
+    }
     
-    //        Alamofire.request("https://api.github.com/repos/s0uthwest/futurerestore/releases/latest").responseJSON { (responseData) -> Void in
-    //            if((responseData.result.value) != nil) {
-    //                let swiftyJsonVar = JSON(responseData.result.value!)
-    //              //  print(swiftyJsonVar)
-    //                if let test = swiftyJsonVar[0]["assets"]["browser_download_url"].string {
-    //                    print(test)
-    //            }
-    //        }
-    //
-    //        }
+    func getdownloadedFRversion()
+    {
+        var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        let documentsDir = paths[0]
+        let path = documentsDir.appendingFormat("/futurerestore/version.txt")
+        
+        do {
+            // Get the contents
+            let contents = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue)
+            downloadedversion.stringValue = contents as String
+        }
+        catch let error as NSError {
+            print("Error finding downloaded FutureRestore version: \(error)")
+        }
+        
+    }
+
+    @IBOutlet var latestFRurl: NSTextField!
+    @IBOutlet var vernumber: NSTextField!
+    @IBOutlet var downloadedversion: NSTextField!
     
     
     

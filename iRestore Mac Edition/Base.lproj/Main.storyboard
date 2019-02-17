@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -296,6 +297,33 @@
                                     <action selector="help:" target="XfG-lQ-9wD" id="EBu-Qz-cWY"/>
                                 </connections>
                             </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uae-Ps-KGQ">
+                                <rect key="frame" x="442" y="274" width="141" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="evO-lV-csJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kb3-sA-rqc">
+                                <rect key="frame" x="442" y="274" width="141" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Kho-cr-4aO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exv-F9-p67">
+                                <rect key="frame" x="452" y="274" width="141" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="aDW-xq-gpz">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -304,9 +332,11 @@
                         <outlet property="bbTogOutlet" destination="6pQ-uw-Sl1" id="gqE-Jt-OcM"/>
                         <outlet property="bbcommand" destination="bQ4-6K-jW2" id="a2u-zu-yHf"/>
                         <outlet property="bmField" destination="yhy-zt-uBc" id="zzq-Nz-kv1"/>
+                        <outlet property="downloadedversion" destination="exv-F9-p67" id="lM0-cz-qMT"/>
                         <outlet property="ipswField" destination="o4N-Dr-nqv" id="f9N-QP-HLI"/>
                         <outlet property="latestBBOutlet" destination="G9k-RV-xCb" id="cv4-MF-F32"/>
                         <outlet property="latestBBtog" destination="G9k-RV-xCb" id="IxC-V8-w6o"/>
+                        <outlet property="latestFRurl" destination="Uae-Ps-KGQ" id="gG2-cN-D9s"/>
                         <outlet property="noBB" destination="6pQ-uw-Sl1" id="6ej-PM-fhZ"/>
                         <outlet property="noBBtog" destination="6pQ-uw-Sl1" id="x1n-x3-B5h"/>
                         <outlet property="nsTog" destination="fVm-H3-O6z" id="P7A-Ly-OMx"/>
@@ -315,6 +345,7 @@
                         <outlet property="sepTogOutlet" destination="fVm-H3-O6z" id="btz-C8-g6k"/>
                         <outlet property="sepcommand" destination="5QZ-65-DBF" id="50t-8W-47q"/>
                         <outlet property="shshField" destination="oRC-I3-Vyy" id="XfS-sD-a1x"/>
+                        <outlet property="vernumber" destination="kb3-sA-rqc" id="Z3Y-cp-E9a"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

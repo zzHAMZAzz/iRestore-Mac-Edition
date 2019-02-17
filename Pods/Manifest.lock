@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.8.1)
   - SSZipArchive (2.1.4)
+  - SWXMLHash (4.7.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.1)
   - SSZipArchive
+  - SWXMLHash (~> 4.7.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - SSZipArchive
+    - SWXMLHash
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
+  SWXMLHash: f6e0933ce74f2626669dc544851bc9fc1941670d
 
-PODFILE CHECKSUM: b7c754fb5a103be685ad6a247ae6f8e0a5a99a40
+PODFILE CHECKSUM: 10bf2f062211e83f12c3e46eedb9ac5af2a8c798
 
 COCOAPODS: 1.6.0

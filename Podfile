@@ -9,5 +9,7 @@ target 'iRestore Mac Edition' do
 
 pod 'Alamofire', '~> 4.8.1'
 pod 'SSZipArchive'
+pod 'SWXMLHash', '~> 4.7.0'
+
 
 end
