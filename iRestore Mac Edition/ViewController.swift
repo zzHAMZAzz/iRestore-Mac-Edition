@@ -170,6 +170,8 @@ class ViewController: NSViewController {
                     print("Error creating version text file")
                 }
             }
+            
+            getdownloadedFRversion()
         }
         
         
@@ -627,6 +629,7 @@ class ViewController: NSViewController {
                     let ver = String(smth.suffix(3))
                     self.vernumber.stringValue = ver
                         print(ver)
+                        self.checkforFRupdates()
                     }
                 }
 
@@ -662,6 +665,43 @@ class ViewController: NSViewController {
     @IBOutlet var vernumber: NSTextField!
     @IBOutlet var downloadedversion: NSTextField!
     
+    func checkforFRupdates()
+    {
+        let DLd:Int = Int(downloadedversion.stringValue)!
+        let LTs:Int = Int(vernumber.stringValue)!
+        
+        if DLd < LTs
+        {
+        print("UPDATE AVAILABLE")
+            
+            
+            
+            let alert = NSAlert.init()
+            alert.messageText = "Update Availalbe!"
+            alert.informativeText = """
+An update is available for FutureRestore!
+            
+Your version is v\(downloadedversion.stringValue)
+The latest version is v\(vernumber.stringValue)
+"""
+            alert.alertStyle = .informational
+            alert.addButton(withTitle: "Update Now")
+            alert.addButton(withTitle: "Later")
+            
+            alert.beginSheetModal(for: self.view.window!, completionHandler: { (modalResponse) -> Void in
+                if modalResponse == NSApplication.ModalResponse.alertFirstButtonReturn {
+                    print("Update Now - PRESSED")
+                    self.futurerestoredl()
+                }
+            })
+            
+        }
+        else
+        {
+        print("NO UPDATE AVAILABLE")
+        }
+        
+    }
     
     
     
