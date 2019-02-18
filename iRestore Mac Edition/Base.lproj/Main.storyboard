@@ -318,15 +318,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kb3-sA-rqc">
-                                <rect key="frame" x="442" y="274" width="141" height="22"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Kho-cr-4aO">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exv-F9-p67">
                                 <rect key="frame" x="452" y="274" width="141" height="22"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -347,6 +338,15 @@
                                 <connections>
                                     <action selector="sepPath:" target="XfG-lQ-9wD" id="YsA-1P-rOD"/>
                                 </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="237-Ra-Mwj" userLabel="FR vernumber">
+                                <rect key="frame" x="383" y="275" width="141" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="YeF-uC-EUc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
                             </textField>
                         </subviews>
                     </view>
@@ -371,7 +371,7 @@
                         <outlet property="sepTogOutlet" destination="fVm-H3-O6z" id="btz-C8-g6k"/>
                         <outlet property="sepcommand" destination="5QZ-65-DBF" id="50t-8W-47q"/>
                         <outlet property="shshField" destination="oRC-I3-Vyy" id="XfS-sD-a1x"/>
-                        <outlet property="vernumber" destination="kb3-sA-rqc" id="Z3Y-cp-E9a"/>
+                        <outlet property="vernumber" destination="237-Ra-Mwj" id="DVD-Hi-ecy"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

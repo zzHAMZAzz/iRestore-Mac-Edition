@@ -31,6 +31,8 @@ class ViewController: NSViewController {
         let documentsDir = paths[0]
         
         do {
+            try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore-latest.zip"))
+            try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore-latest/"))
             try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore/"))
             try fileManager.removeItem(atPath: documentsDir.appendingFormat("/futurerestore_macOS_v\(vernumber.stringValue).zip"))
         }
@@ -197,14 +199,17 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        // ** HARD CODED TO DOWNLOAD v224 of FUTURERESTORE
+        
+        latestFRurl.stringValue = "https://github.com/s0uthwest/futurerestore/releases/download/224/futurerestore_macOS_v224.zip"
+        vernumber.stringValue = "224"
    // checkforIRupdates()
 
         
         let fileManager = FileManager.default
         
         
-        
+        checkforIRupdates()
         
         var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let documentsDir = paths[0]
@@ -564,6 +569,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func help(_ sender: Any) {
+        
         let alert = NSAlert.init()
         alert.messageText = "Info"
         alert.informativeText = """
@@ -611,12 +617,93 @@ class ViewController: NSViewController {
         
     }
     
-
+    
+    func checkforIRupdates()
+    {
+        //
+    
+        let baseUrl = "https://zapier.com/engine/rss/4285659/iRestoreReleases/"
+        let request = NSMutableURLRequest(url: NSURL(string: baseUrl)! as URL)
+        let session = URLSession.shared
+        request.httpMethod = "GET"
+    
+        var err: NSError?
+    
+        let task = session.dataTask(with: request as URLRequest) {
+            (data, response, error) in
+    
+            if data == nil {
+                print("dataTaskWithRequest error: \(error)")
+                return
+            }
+    
+            let xml = SWXMLHash.parse(data!)
+    
+            if let definition = xml["rss"]["channel"]["item"]["description"].element?.text {
+    
+                let latestiRversion = definition
+    
+                let currentiRversion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    
+                let latestiRversion1 = String(latestiRversion.dropFirst())
+    
+                let latestiRversion2 = latestiRversion1.replacingOccurrences(of: ".", with: "")
+                let currentiRversion2 = currentiRversion!.replacingOccurrences(of: ".", with: "")
+    
+                print("LATEST: \(latestiRversion2) - CURRENT: \(currentiRversion2)")
+    
+                DispatchQueue.main.async { // Correct
+                    self.currentIR.stringValue = currentiRversion2
+                    self.latestIR.stringValue = latestiRversion2
+    
+    
+                    let DLd:Int = Int(self.currentIR.stringValue)!
+                    let LTs:Int = Int(self.latestIR.stringValue)!
+    
+                    if DLd < LTs
+                    {
+                        print("iRESTORE UPDATE AVAILABLE")
+    
+    
+    
+                        let alert = NSAlert.init()
+                        alert.messageText = "Update Availalbe!"
+                        alert.informativeText = """
+                        An update is available for iRestore - Mac Edition!
+                        
+                        Your version is v\(self.currentIR.stringValue)
+                        The latest version is v\(self.latestIR.stringValue)
+                        """
+                        alert.alertStyle = .informational
+                        alert.addButton(withTitle: "Visit Download Page")
+                        alert.addButton(withTitle: "Later")
+    
+                        alert.beginSheetModal(for: self.view.window!, completionHandler: { (modalResponse) -> Void in
+                            if modalResponse == NSApplication.ModalResponse.alertFirstButtonReturn {
+                                guard let url = URL(string: "https://github.com/zzHAMZAzz/iRestore-Mac-Edition/releases/latest") else { return }
+                                NSWorkspace.shared.open(url)
+                            }
+                        })
+    
+                    }
+                    else
+                    {
+                    }
+    
+                }
+            }
+        }
+        task.resume()
+    
+    
+    }
+    
+    
 
 
     @IBOutlet var latestFRurl: NSTextField!
-    @IBOutlet var vernumber: NSTextField!
     @IBOutlet var downloadedversion: NSTextField!
+    @IBOutlet var vernumber: NSTextField!
     
 
 
