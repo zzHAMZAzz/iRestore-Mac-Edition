@@ -197,12 +197,9 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-    
-        frReleases()
-        getdownloadedFRversion()
-        
-        
+
+   // checkforIRupdates()
+
         
         let fileManager = FileManager.default
         
@@ -215,6 +212,7 @@ class ViewController: NSViewController {
         
         if fileManager.fileExists(atPath: FRpath) {
             print("File exists")
+            getdownloadedFRversion()
         }
         else {
             // show alert to inform Download
@@ -583,9 +581,8 @@ class ViewController: NSViewController {
         Baseband Manifest: Required if you are using a custom baseband.
         
         
-        --------
+        ****************
         
-        Newest FutureRestore Version: v\(vernumber.stringValue)
         Your Downloaded FutureRestore Version: v\(downloadedversion.stringValue)
         
         """
@@ -595,54 +592,7 @@ class ViewController: NSViewController {
         
     }
     
-    func frReleases()
-    {
-        let baseUrl = "https://zapier.com/engine/rss/4285659/s0uthwestFRreleases/"
-        let request = NSMutableURLRequest(url: NSURL(string: baseUrl)! as URL)
-        let session = URLSession.shared
-        request.httpMethod = "GET"
-        
-        var err: NSError?
-        
-        let task = session.dataTask(with: request as URLRequest) {
-            (data, response, error) in
-            
-            if data == nil {
-                print("dataTaskWithRequest error: \(error)")
-                return
-            }
-            
-            let xml = SWXMLHash.parse(data!)
-            
-            if let definition = xml["rss"]["channel"]["item"]["description"].element?.text {
 
-                let smth = definition
-                
-
-                
-                if let index = (smth.range(of: ",")?.lowerBound)
-                {
-                    let macOSlink = String(smth.prefix(upTo: index))
-                    print(macOSlink)
-                    DispatchQueue.main.async { // Correct
-                    self.latestFRurl.stringValue = macOSlink
-                    let ver = String(smth.suffix(3))
-                    self.vernumber.stringValue = ver
-                        print(ver)
-                        self.checkforFRupdates()
-                    }
-                }
-
-            }
-            
-            
-            
-
-            
-        }
-        task.resume()
-        
-    }
     
     func getdownloadedFRversion()
     {
@@ -660,49 +610,23 @@ class ViewController: NSViewController {
         }
         
     }
+    
+
+
 
     @IBOutlet var latestFRurl: NSTextField!
     @IBOutlet var vernumber: NSTextField!
     @IBOutlet var downloadedversion: NSTextField!
     
-    func checkforFRupdates()
-    {
-        let DLd:Int = Int(downloadedversion.stringValue)!
-        let LTs:Int = Int(vernumber.stringValue)!
+
+
         
-        if DLd < LTs
-        {
-        print("UPDATE AVAILABLE")
-            
-            
-            
-            let alert = NSAlert.init()
-            alert.messageText = "Update Availalbe!"
-            alert.informativeText = """
-An update is available for FutureRestore!
-            
-Your version is v\(downloadedversion.stringValue)
-The latest version is v\(vernumber.stringValue)
-"""
-            alert.alertStyle = .informational
-            alert.addButton(withTitle: "Update Now")
-            alert.addButton(withTitle: "Later")
-            
-            alert.beginSheetModal(for: self.view.window!, completionHandler: { (modalResponse) -> Void in
-                if modalResponse == NSApplication.ModalResponse.alertFirstButtonReturn {
-                    print("Update Now - PRESSED")
-                    self.futurerestoredl()
-                }
-            })
-            
-        }
-        else
-        {
-        print("NO UPDATE AVAILABLE")
-        }
-        
-    }
     
     
     
-}
+
+    
+    @IBOutlet var currentIR: NSTextField!
+    @IBOutlet var latestIR: NSTextField!}
+
+

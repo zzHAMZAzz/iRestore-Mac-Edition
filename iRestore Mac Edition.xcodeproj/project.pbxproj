@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BBF24985221B62D2006B4106 /* Updater Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF24984221B62D2006B4106 /* Updater Functions.swift */; };
+		BBF24985221B62D2006B4106 /* Unused Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF24984221B62D2006B4106 /* Unused Functions.swift */; };
 		BBF8F7152212101900E083BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F7142212101900E083BD /* AppDelegate.swift */; };
 		BBF8F7172212101900E083BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F7162212101900E083BD /* ViewController.swift */; };
 		BBF8F7192212101B00E083BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF8F7182212101B00E083BD /* Assets.xcassets */; };
@@ -36,7 +36,7 @@
 		0A1BCCA946A638D22A120D8D /* Pods_iRestore_Mac_Edition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iRestore_Mac_Edition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B14D2DF453B8E2703F9CD2 /* Pods-iRestore Mac Edition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRestore Mac Edition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iRestore Mac Edition/Pods-iRestore Mac Edition.debug.xcconfig"; sourceTree = "<group>"; };
 		BBD1175E2214C9CE00A616DF /* iRestore Mac Edition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iRestore Mac Edition.entitlements"; sourceTree = "<group>"; };
-		BBF24984221B62D2006B4106 /* Updater Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Updater Functions.swift"; sourceTree = "<group>"; };
+		BBF24984221B62D2006B4106 /* Unused Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Unused Functions.swift"; sourceTree = "<group>"; };
 		BBF8F7112212101800E083BD /* iRestore Mac Edition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iRestore Mac Edition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF8F7142212101900E083BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBF8F7162212101900E083BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				BBD1175E2214C9CE00A616DF /* iRestore Mac Edition.entitlements */,
 				BBF8F7142212101900E083BD /* AppDelegate.swift */,
 				BBF8F7162212101900E083BD /* ViewController.swift */,
-				BBF24984221B62D2006B4106 /* Updater Functions.swift */,
+				BBF24984221B62D2006B4106 /* Unused Functions.swift */,
 				BBF8F7182212101B00E083BD /* Assets.xcassets */,
 				BBF8F71A2212101B00E083BD /* Main.storyboard */,
 				BBF8F71D2212101B00E083BD /* Info.plist */,
@@ -307,7 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF24985221B62D2006B4106 /* Updater Functions.swift in Sources */,
+				BBF24985221B62D2006B4106 /* Unused Functions.swift in Sources */,
 				BBF8F7172212101900E083BD /* ViewController.swift in Sources */,
 				BBF8F7152212101900E083BD /* AppDelegate.swift in Sources */,
 			);
