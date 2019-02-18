@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBF24985221B62D2006B4106 /* Updater Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF24984221B62D2006B4106 /* Updater Functions.swift */; };
 		BBF8F7152212101900E083BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F7142212101900E083BD /* AppDelegate.swift */; };
 		BBF8F7172212101900E083BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F7162212101900E083BD /* ViewController.swift */; };
 		BBF8F7192212101B00E083BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF8F7182212101B00E083BD /* Assets.xcassets */; };
 		BBF8F71C2212101B00E083BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF8F71A2212101B00E083BD /* Main.storyboard */; };
-		BBF8F7282212101B00E083BD /* iRestore_Mac_EditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F7272212101B00E083BD /* iRestore_Mac_EditionTests.swift */; };
-		BBF8F7332212101B00E083BD /* iRestore_Mac_EditionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F7322212101B00E083BD /* iRestore_Mac_EditionUITests.swift */; };
 		D9E051C9C831C12931EE65AE /* Pods_iRestore_Mac_Edition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1BCCA946A638D22A120D8D /* Pods_iRestore_Mac_Edition.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +36,7 @@
 		0A1BCCA946A638D22A120D8D /* Pods_iRestore_Mac_Edition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iRestore_Mac_Edition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B14D2DF453B8E2703F9CD2 /* Pods-iRestore Mac Edition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRestore Mac Edition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iRestore Mac Edition/Pods-iRestore Mac Edition.debug.xcconfig"; sourceTree = "<group>"; };
 		BBD1175E2214C9CE00A616DF /* iRestore Mac Edition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iRestore Mac Edition.entitlements"; sourceTree = "<group>"; };
+		BBF24984221B62D2006B4106 /* Updater Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Updater Functions.swift"; sourceTree = "<group>"; };
 		BBF8F7112212101800E083BD /* iRestore Mac Edition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iRestore Mac Edition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF8F7142212101900E083BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBF8F7162212101900E083BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,11 +45,7 @@
 		BBF8F71D2212101B00E083BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBF8F71E2212101B00E083BD /* iRestore_Mac_Edition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRestore_Mac_Edition.entitlements; sourceTree = "<group>"; };
 		BBF8F7232212101B00E083BD /* iRestore Mac EditionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iRestore Mac EditionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBF8F7272212101B00E083BD /* iRestore_Mac_EditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRestore_Mac_EditionTests.swift; sourceTree = "<group>"; };
-		BBF8F7292212101B00E083BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBF8F72E2212101B00E083BD /* iRestore Mac EditionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iRestore Mac EditionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBF8F7322212101B00E083BD /* iRestore_Mac_EditionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRestore_Mac_EditionUITests.swift; sourceTree = "<group>"; };
-		BBF8F7342212101B00E083BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C276C7623823C38DD45CEE1C /* Pods-iRestore Mac Edition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRestore Mac Edition.release.xcconfig"; path = "Pods/Target Support Files/Pods-iRestore Mac Edition/Pods-iRestore Mac Edition.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,8 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				BBF8F7132212101800E083BD /* iRestore Mac Edition */,
-				BBF8F7262212101B00E083BD /* iRestore Mac EditionTests */,
-				BBF8F7312212101B00E083BD /* iRestore Mac EditionUITests */,
 				BBF8F7122212101800E083BD /* Products */,
 				D25881114632B709363F583E /* Pods */,
 				338E8129686C13045CAE5AAD /* Frameworks */,
@@ -115,30 +109,13 @@
 				BBD1175E2214C9CE00A616DF /* iRestore Mac Edition.entitlements */,
 				BBF8F7142212101900E083BD /* AppDelegate.swift */,
 				BBF8F7162212101900E083BD /* ViewController.swift */,
+				BBF24984221B62D2006B4106 /* Updater Functions.swift */,
 				BBF8F7182212101B00E083BD /* Assets.xcassets */,
 				BBF8F71A2212101B00E083BD /* Main.storyboard */,
 				BBF8F71D2212101B00E083BD /* Info.plist */,
 				BBF8F71E2212101B00E083BD /* iRestore_Mac_Edition.entitlements */,
 			);
 			path = "iRestore Mac Edition";
-			sourceTree = "<group>";
-		};
-		BBF8F7262212101B00E083BD /* iRestore Mac EditionTests */ = {
-			isa = PBXGroup;
-			children = (
-				BBF8F7272212101B00E083BD /* iRestore_Mac_EditionTests.swift */,
-				BBF8F7292212101B00E083BD /* Info.plist */,
-			);
-			path = "iRestore Mac EditionTests";
-			sourceTree = "<group>";
-		};
-		BBF8F7312212101B00E083BD /* iRestore Mac EditionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BBF8F7322212101B00E083BD /* iRestore_Mac_EditionUITests.swift */,
-				BBF8F7342212101B00E083BD /* Info.plist */,
-			);
-			path = "iRestore Mac EditionUITests";
 			sourceTree = "<group>";
 		};
 		D25881114632B709363F583E /* Pods */ = {
@@ -330,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF24985221B62D2006B4106 /* Updater Functions.swift in Sources */,
 				BBF8F7172212101900E083BD /* ViewController.swift in Sources */,
 				BBF8F7152212101900E083BD /* AppDelegate.swift in Sources */,
 			);
@@ -339,7 +317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF8F7282212101B00E083BD /* iRestore_Mac_EditionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +324,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF8F7332212101B00E083BD /* iRestore_Mac_EditionUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +482,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.iRestore-Mac-Edition";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -526,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.iRestore-Mac-Edition";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
